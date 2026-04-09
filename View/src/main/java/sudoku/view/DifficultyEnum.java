@@ -10,6 +10,11 @@ public enum DifficultyEnum {
     MEDIUM(2),
     HARD(3);
 
+    // TODO - think about the size of the board
+    public static final int EASY_NUM_REMOVED = 30;
+    public static final int MED_NUM_REMOVED = 50;
+    public static final int HARD_NUM_REMOVED = 70;
+
     @SuppressWarnings("unused")
     private int value;
 
@@ -23,18 +28,17 @@ public enum DifficultyEnum {
      * @param sudokuBoard the Sudoku board to clear fields from
      */
     public void clearSudokuFieldsFromSudokuBoardBasedOnDifficulty(SudokuBoard sudokuBoard) {
-        // TODO - think about the size of the board
 
         int numberOfFieldsToClear = 0;
         switch (this) {
             case EASY:
-                numberOfFieldsToClear = 30;
+                numberOfFieldsToClear = EASY_NUM_REMOVED;
                 break;
             case MEDIUM:
-                numberOfFieldsToClear = 50;
+                numberOfFieldsToClear = MED_NUM_REMOVED;
                 break;
             case HARD:
-                numberOfFieldsToClear = 70;
+                numberOfFieldsToClear = HARD_NUM_REMOVED;
                 break;
             default:
                 break;

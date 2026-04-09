@@ -40,8 +40,7 @@ public class DifficultyTest {
             }
         }
 
-        //I know its a magic number but they dont have these values saved anywhere
-        assertEquals(30, numEmptyFields);
+        assertEquals(DifficultyEnum.EASY_NUM_REMOVED, numEmptyFields);
 
     }
 }
